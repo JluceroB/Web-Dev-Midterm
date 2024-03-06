@@ -1,0 +1,99 @@
+
+ body{
+    background-color: rgb(240, 201, 156);
+ }
+ 
+.container{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+"nav nav nav nav nav"
+"Image Education Education Education Education"
+"Image about-me about-me about-me about-me"
+"Papers Papers Papers Papers Papers"
+"Blogs Blogs Hobbies Hobbies";
+
+grid-gap: 0.5rem;
+
+}
+nav {
+    text-align: center;
+    background: rgb(240, 201, 156);
+} 
+
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline;
+    padding: 50px;
+    margin: 20px; 
+}
+
+nav ul li a:hover {
+    background-color: rgb(225, 143, 75);
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#education{
+    background: rgb(240, 201, 156);
+    border-radius: 40px;
+    border: 10px solid rgb(204, 109, 46);
+    grid-area: education;
+    padding: 10px;
+}
+
+#about-me{
+    background: rgb(240, 201, 156);
+    border-radius: 40px;
+    border: 10px solid rgb(204, 109, 46);
+    grid-area: about-me;
+    padding: 10px;
+}
+#Papers{
+    background:rgb(240, 201, 156);
+    border-radius: 40px;
+    display: block;
+    border: 10px solid rgb(204, 109, 46);
+    grid-area: Papers;
+    padding: 10px;
+}
+
+#Blogs{
+    background: rgb(240, 201, 156);
+    border-radius: 40px;
+    border: 10px solid rgb(204, 109, 46);
+    grid-area: Blogs;
+    padding: 10px;
+}
+#Hobbies{
+    background: rgb(240, 201, 156);
+    border-radius: 40px;
+    border: 10px solid rgb(204, 109, 46);
+    grid-area: Hobbies;
+    padding: 10px;
+}
+
+
+/*Question 4 Mobile Layout*/
+
+
+@media only screen and (max-width:800px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "nav nav"
+        "Image education"
+        "Image about-me"
+        "Papers"
+        "Blogs"
+        "Hobbies";
+
+    }
+}
